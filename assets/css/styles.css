@@ -35,12 +35,14 @@ main {
 .advice__container {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  max-width: 500px;
+  min-width: 300px;
   margin: auto;
   text-align: center;
   background: var(--dark-grayish-blue);
   height: 300px;
   border-radius: 7px;
+  position: relative;
 }
 
 .advice__wrapper {
@@ -48,7 +50,7 @@ main {
 }
 
 .advice__divider {
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
 .advice__wrapper p {
@@ -56,21 +58,26 @@ main {
   box-sizing: border-box;
   line-height: 2;
   font-size: 2rem;
-  margin: 1rem auto 2.5rem;
+  margin: 1rem auto 2rem;
   font-weight: bold;
 }
 
+.advice__button--wrapper {
+  width: 100%;
+}
+
 .advice__button {
-  background: var(--neon-green);
   border: none;
-  display: grid;
-  place-content: center;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  position: relative;
-  bottom: -25px;
+  position: absolute;
   left: 50%;
+  top: 92%;
+  display: flex;
+  background: var(--neon-green);
+  align-items: center;
+  justify-content: center;
   transform: translateX(-50%);
 }
 
@@ -78,9 +85,9 @@ main {
   cursor: pointer;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 414px) {
   .advice__container {
-    width: 320px;
+    width: 90%;
   }
 
   .advice__number {
